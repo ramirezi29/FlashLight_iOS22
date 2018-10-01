@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		476188FC2162CB7A00A58A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476188FB2162CB7A00A58A7D /* AppDelegate.swift */; };
-		476188FE2162CB7A00A58A7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476188FD2162CB7A00A58A7D /* ViewController.swift */; };
 		476189012162CB7A00A58A7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476188FF2162CB7A00A58A7D /* Main.storyboard */; };
 		476189032162CB7B00A58A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476189022162CB7B00A58A7D /* Assets.xcassets */; };
 		476189062162CB7B00A58A7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476189042162CB7B00A58A7D /* LaunchScreen.storyboard */; };
+		4761890E2162CBA200A58A7D /* FlashLightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4761890D2162CBA200A58A7D /* FlashLightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		476188F82162CB7A00A58A7D /* FlashLight_iOS22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashLight_iOS22.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		476188FB2162CB7A00A58A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		476188FD2162CB7A00A58A7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		476189002162CB7A00A58A7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		476189022162CB7B00A58A7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		476189052162CB7B00A58A7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		476189072162CB7B00A58A7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4761890D2162CBA200A58A7D /* FlashLightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashLightViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,46 @@
 		476188FA2162CB7A00A58A7D /* FlashLight_iOS22 */ = {
 			isa = PBXGroup;
 			children = (
-				476188FB2162CB7A00A58A7D /* AppDelegate.swift */,
-				476188FD2162CB7A00A58A7D /* ViewController.swift */,
+				476189112162CBBB00A58A7D /* ExtensionsUI */,
+				476189102162CBB100A58A7D /* ViewControllers */,
+				4761890F2162CBAB00A58A7D /* UI */,
+				476189122162CBD500A58A7D /* Resources */,
+			);
+			path = FlashLight_iOS22;
+			sourceTree = "<group>";
+		};
+		4761890F2162CBAB00A58A7D /* UI */ = {
+			isa = PBXGroup;
+			children = (
 				476188FF2162CB7A00A58A7D /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		476189102162CBB100A58A7D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4761890D2162CBA200A58A7D /* FlashLightViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		476189112162CBBB00A58A7D /* ExtensionsUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExtensionsUI;
+			sourceTree = "<group>";
+		};
+		476189122162CBD500A58A7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				476188FB2162CB7A00A58A7D /* AppDelegate.swift */,
 				476189022162CB7B00A58A7D /* Assets.xcassets */,
 				476189042162CB7B00A58A7D /* LaunchScreen.storyboard */,
 				476189072162CB7B00A58A7D /* Info.plist */,
 			);
-			path = FlashLight_iOS22;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				476188FE2162CB7A00A58A7D /* ViewController.swift in Sources */,
+				4761890E2162CBA200A58A7D /* FlashLightViewController.swift in Sources */,
 				476188FC2162CB7A00A58A7D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = FlashLight_iOS22/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlashLight_iOS22/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7AYJDAX2C;
-				INFOPLIST_FILE = FlashLight_iOS22/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlashLight_iOS22/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

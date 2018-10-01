@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MOr-WA-pvm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flash Light View Controller-->
+        <scene sceneID="4nC-Iz-zuS">
+            <objects>
+                <viewController id="MOr-WA-pvm" customClass="FlashLightViewController" customModule="FlashLight_iOS22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qq4-Ok-YjB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTF-PH-jDz">
+                                <rect key="frame" x="0.0" y="475" width="375" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="0I1-TK-xIk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-6m-VXa">
+                                <rect key="frame" x="72.5" y="236.5" width="230" height="44"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="(FlashLightButton)"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="FVU-6m-VXa" firstAttribute="centerX" secondItem="Qq4-Ok-YjB" secondAttribute="centerX" id="5rP-il-IbA"/>
+                            <constraint firstItem="LTF-PH-jDz" firstAttribute="trailing" secondItem="68T-HV-p5B" secondAttribute="trailing" id="EB3-4Z-sgR"/>
+                            <constraint firstItem="LTF-PH-jDz" firstAttribute="leading" secondItem="68T-HV-p5B" secondAttribute="leading" id="UIq-Nn-Cyu"/>
+                            <constraint firstItem="LTF-PH-jDz" firstAttribute="leading" secondItem="FVU-6m-VXa" secondAttribute="trailing" constant="-302.5" id="WiP-uf-q56"/>
+                            <constraint firstItem="FVU-6m-VXa" firstAttribute="centerY" secondItem="Qq4-Ok-YjB" secondAttribute="centerY" constant="-75" id="gEy-lX-QUo"/>
+                            <constraint firstItem="LTF-PH-jDz" firstAttribute="bottom" secondItem="68T-HV-p5B" secondAttribute="bottom" id="wcp-7s-Fd6"/>
+                            <constraint firstItem="LTF-PH-jDz" firstAttribute="centerX" secondItem="Qq4-Ok-YjB" secondAttribute="centerX" id="yS8-Wb-szs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="68T-HV-p5B"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Uh3-Tk-sTh" appends="YES" id="oED-Mq-Bx2"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="FlashLightButton" destination="FVU-6m-VXa" id="VwO-wl-2mO"/>
+                        <outlet property="scaryImage" destination="LTF-PH-jDz" id="66v-MS-xkw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sc-LY-0Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="Uh3-Tk-sTh">
+                    <connections>
+                        <action selector="userSwipedAction:" destination="MOr-WA-pvm" id="Ta0-wJ-g6D"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="301.60000000000002" y="143.47826086956522"/>
+        </scene>
+    </scenes>
+</document>
